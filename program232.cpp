@@ -50,7 +50,7 @@ class SinglyCL
         void Display();
         int  Count();
 };
-void InsertFirst(PPNODE First, PPNODE Last, int no)
+void InsertFirst( int no)
 {
     PNODE newn = (PNODE)malloc(sizeof(NODE));  // memory allocation
 
@@ -71,7 +71,7 @@ void InsertFirst(PPNODE First, PPNODE Last, int no)
 
 }
 
-void InsertLast(PPNODE First, PPNODE Last, int no)
+void InsertLast( int no)
 {
     PNODE newn = (PNODE)malloc(sizeof(NODE));  // memory allocation
 
@@ -92,7 +92,7 @@ void InsertLast(PPNODE First, PPNODE Last, int no)
 
 }
 
-void InsertAtPosition(PPNODE First, PPNODE Last, int no, int ipos)
+void InsertAtPosition( int no, int ipos)
 {
     PNODE newn = NULL;
     PNODE temp = *First;
@@ -130,7 +130,7 @@ NodeCnt=Count(*First,*Last);
     }
 }
 
-void DeleteAtPosition(PPNODE First, PPNODE Last,  int ipos)
+void DeleteAtPosition(int ipos)
 {
     int iCnt=0;
     int NodeCnt = 0;
@@ -167,7 +167,7 @@ void DeleteAtPosition(PPNODE First, PPNODE Last,  int ipos)
     }
 }
 
-void DeleteFirst(PPNODE First, PPNODE Last)
+void DeleteFirst()
 {
     PNODE temp = *First; // Temporary pointer
 
@@ -193,7 +193,7 @@ void DeleteFirst(PPNODE First, PPNODE Last)
     }
 }
 
-void DeleteLast(PPNODE First, PPNODE Last)
+void DeleteLast()
 {
     PNODE temp =*First;
 
@@ -221,7 +221,7 @@ void DeleteLast(PPNODE First, PPNODE Last)
     }
 }
 
-void Display(PNODE First, PNODE Last)
+void Display()
 {
     printf("Elements of Linked list are:\n");
 
@@ -236,7 +236,7 @@ void Display(PNODE First, PNODE Last)
 
 }
 
-int Count(PNODE First, PNODE Last)
+int Count()
 {
     int iCnt=0;
 
